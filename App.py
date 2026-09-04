@@ -17,7 +17,7 @@ st.set_page_config(
 )
 
 # ─────────────────────────────────────────────
-# GLOBAL CSS  –  Black × Red dark theme
+# GLOBAL CSS  –  Clean Healthcare Dashboard theme
 # ─────────────────────────────────────────────
 st.markdown("""
 <style>
@@ -25,35 +25,35 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap');
 
 html, body, [data-testid="stAppViewContainer"] {
-    background-color: #0a0a0a !important;
-    color: #e8e8e8 !important;
+    background-color: #f3f7fa !important;
+    color: #203b49 !important;
     font-family: 'Inter', sans-serif;
 }
 [data-testid="stSidebar"] {
-    background: #0f0f0f !important;
-    border-right: 1px solid #c0000040;
+    background: #ffffff !important;
+    border-right: 1px solid #dbe7ec;
 }
-[data-testid="stSidebar"] * { color: #e8e8e8 !important; }
+[data-testid="stSidebar"] * { color: #203b49 !important; }
 [data-testid="stHeader"] { background: transparent !important; }
 
 /* ── Headings ── */
 h1, h2, h3 { font-family: 'Orbitron', monospace !important; }
-h1 { color: #ff1a1a !important; letter-spacing: 2px; }
-h2 { color: #cc0000 !important; }
-h3 { color: #ff4444 !important; }
+h1 { color: #2f7d95 !important; letter-spacing: 2px; }
+h2 { color: #2b6f8a !important; }
+h3 { color: #3c8fa8 !important; }
 
 /* ── Cards ── */
 .card {
-    background: #111111;
-    border: 1px solid #cc000033;
+    background: #ffffff;
+    border: 1px solid #2b6f8a33;
     border-radius: 8px;
     padding: 18px 22px;
     margin-bottom: 14px;
-    box-shadow: 0 0 12px #cc000015;
+    box-shadow: 0 0 12px #2b6f8a15;
 }
 .card-red {
-    background: linear-gradient(135deg, #1a0000 0%, #0f0f0f 100%);
-    border-left: 3px solid #cc0000;
+    background: linear-gradient(135deg, #eaf4f7 0%, #ffffff 100%);
+    border-left: 3px solid #2b6f8a;
     border-radius: 6px;
     padding: 14px 18px;
     margin-bottom: 10px;
@@ -61,7 +61,7 @@ h3 { color: #ff4444 !important; }
 
 /* ── Buttons ── */
 .stButton > button {
-    background: linear-gradient(135deg, #8b0000, #cc0000) !important;
+    background: linear-gradient(135deg, #245f75, #2b6f8a) !important;
     color: #fff !important;
     border: none !important;
     border-radius: 6px !important;
@@ -70,8 +70,8 @@ h3 { color: #ff4444 !important; }
     transition: all 0.2s ease !important;
 }
 .stButton > button:hover {
-    background: linear-gradient(135deg, #cc0000, #ff1a1a) !important;
-    box-shadow: 0 0 16px #cc000060 !important;
+    background: linear-gradient(135deg, #2b6f8a, #2f7d95) !important;
+    box-shadow: 0 0 16px #2b6f8a60 !important;
 }
 
 /* ── Inputs ── */
@@ -79,101 +79,101 @@ h3 { color: #ff4444 !important; }
 .stNumberInput > div > div > input,
 .stTextArea textarea,
 .stSelectbox > div > div {
-    background-color: #1a1a1a !important;
-    color: #e8e8e8 !important;
-    border: 1px solid #cc000050 !important;
+    background-color: #f8fbfc !important;
+    color: #203b49 !important;
+    border: 1px solid #2b6f8a50 !important;
     border-radius: 6px !important;
 }
 .stMultiSelect > div > div {
-    background-color: #1a1a1a !important;
-    border: 1px solid #cc000050 !important;
+    background-color: #f8fbfc !important;
+    border: 1px solid #2b6f8a50 !important;
 }
-.stSlider > div > div > div { background-color: #cc0000 !important; }
+.stSlider > div > div > div { background-color: #2b6f8a !important; }
 
 /* ── Tabs ── */
 .stTabs [data-baseweb="tab-list"] {
-    background-color: #111111 !important;
-    border-bottom: 1px solid #cc000040 !important;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #2b6f8a40 !important;
 }
 .stTabs [data-baseweb="tab"] {
-    color: #888 !important;
+    color: #71808a !important;
     font-family: 'Orbitron', monospace !important;
     font-size: 11px !important;
 }
 .stTabs [aria-selected="true"] {
-    color: #ff1a1a !important;
-    border-bottom: 2px solid #ff1a1a !important;
+    color: #2f7d95 !important;
+    border-bottom: 2px solid #2f7d95 !important;
     background: transparent !important;
 }
 
 /* ── Metrics ── */
-[data-testid="stMetricValue"] { color: #ff4444 !important; font-size: 28px !important; }
-[data-testid="stMetricLabel"] { color: #888 !important; }
+[data-testid="stMetricValue"] { color: #3c8fa8 !important; font-size: 28px !important; }
+[data-testid="stMetricLabel"] { color: #71808a !important; }
 
 /* ── DataFrame ── */
-[data-testid="stDataFrame"] { border: 1px solid #cc000030 !important; }
+[data-testid="stDataFrame"] { border: 1px solid #2b6f8a30 !important; }
 
 /* ── Expander ── */
 .streamlit-expanderHeader {
-    background-color: #1a0000 !important;
-    color: #ff4444 !important;
-    border: 1px solid #cc000040 !important;
+    background-color: #eaf4f7 !important;
+    color: #3c8fa8 !important;
+    border: 1px solid #2b6f8a40 !important;
     border-radius: 6px !important;
 }
 
 /* ── Alerts ── */
-.stSuccess { background-color: #001a00 !important; border-left: 3px solid #00aa44 !important; }
-.stWarning { background-color: #1a0e00 !important; border-left: 3px solid #ff8800 !important; }
-.stError   { background-color: #1a0000 !important; border-left: 3px solid #cc0000 !important; }
-.stInfo    { background-color: #00001a !important; border-left: 3px solid #0066cc !important; }
+.stSuccess { background-color: #eafaf3 !important; border-left: 3px solid #31836f !important; }
+.stWarning { background-color: #fff5e8 !important; border-left: 3px solid #d8892f !important; }
+.stError   { background-color: #fdeeee !important; border-left: 3px solid #c0392b !important; }
+.stInfo    { background-color: #edf5fa !important; border-left: 3px solid #397fa6 !important; }
 
 /* ── Sidebar radio ── */
 .stRadio > div { gap: 6px !important; }
-.stRadio label { color: #ccc !important; }
+.stRadio label { color: #425761 !important; }
 
 /* ── Hero banner ── */
 .hero-banner {
-    background: linear-gradient(135deg, #1a0000 0%, #0a0a0a 50%, #0f0000 100%);
-    border: 1px solid #cc000050;
+    background: linear-gradient(135deg, #eaf4f7 0%, #f3f7fa 50%, #eef6f8 100%);
+    border: 1px solid #2b6f8a50;
     border-radius: 10px;
     padding: 30px 36px;
     margin-bottom: 28px;
     text-align: center;
-    box-shadow: 0 0 40px #cc000020;
+    box-shadow: 0 0 40px #2b6f8a20;
 }
 .hero-title {
     font-family: 'Orbitron', monospace;
     font-size: 2.2rem;
     font-weight: 900;
-    color: #ff1a1a;
+    color: #2f7d95;
     letter-spacing: 3px;
     margin-bottom: 6px;
 }
 .hero-sub {
-    color: #888;
+    color: #71808a;
     font-size: 0.95rem;
     letter-spacing: 1px;
 }
 .pulse-dot {
     display: inline-block;
     width: 10px; height: 10px;
-    background: #cc0000;
+    background: #2b6f8a;
     border-radius: 50%;
     margin-right: 8px;
     animation: pulse 1.5s infinite;
 }
 @keyframes pulse {
-    0%   { box-shadow: 0 0 0 0 #cc000060; }
-    70%  { box-shadow: 0 0 0 10px #cc000000; }
-    100% { box-shadow: 0 0 0 0 #cc000000; }
+    0%   { box-shadow: 0 0 0 0 #2b6f8a60; }
+    70%  { box-shadow: 0 0 0 10px #2b6f8a00; }
+    100% { box-shadow: 0 0 0 0 #2b6f8a00; }
 }
 
 /* ── Result badge ── */
 .badge-positive {
     display: inline-block;
-    background: #8b000033;
-    color: #ff4444;
-    border: 1px solid #cc0000;
+    background: #245f7533;
+    color: #3c8fa8;
+    border: 1px solid #2b6f8a;
     border-radius: 20px;
     padding: 4px 14px;
     font-size: 0.85rem;
@@ -181,9 +181,9 @@ h3 { color: #ff4444 !important; }
 }
 .badge-negative {
     display: inline-block;
-    background: #00330033;
-    color: #44cc44;
-    border: 1px solid #00aa44;
+    background: #e7f4f0;
+    color: #31836f;
+    border: 1px solid #31836f;
     border-radius: 20px;
     padding: 4px 14px;
     font-size: 0.85rem;
@@ -192,21 +192,112 @@ h3 { color: #ff4444 !important; }
 
 /* ── Plot background ── */
 .stPlotlyChart, .stPyplot { background: transparent !important; }
+
+/* ── Healthcare dashboard layout ── */
+.main .block-container {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    max-width: 1450px;
+}
+[data-testid="stSidebar"] {
+    box-shadow: 2px 0 12px rgba(43,111,138,0.06);
+}
+[data-testid="stSidebar"] section {
+    padding-top: 1rem;
+}
+[data-testid="stSidebar"] .stRadio > label {
+    color: #71808a !important;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.4px;
+}
+[data-testid="stSidebar"] .stRadio div[role="radiogroup"] {
+    gap: 6px !important;
+}
+[data-testid="stSidebar"] .stRadio label {
+    background: transparent !important;
+    border-radius: 9px !important;
+    padding: 10px 12px !important;
+    transition: all .2s ease;
+}
+[data-testid="stSidebar"] .stRadio label:hover {
+    background: #edf6f8 !important;
+    transform: translateX(2px);
+}
+[data-testid="stSidebar"] .stRadio label:has(input:checked) {
+    background: #e8f3f6 !important;
+    color: #2b6f8a !important;
+    font-weight: 700 !important;
+    box-shadow: inset 3px 0 0 #2b6f8a;
+}
+.hero-banner {
+    background: #ffffff !important;
+    border: 1px solid #dce9ee !important;
+    border-radius: 16px !important;
+    padding: 25px 30px !important;
+    text-align: left !important;
+    box-shadow: 0 5px 22px rgba(43,111,138,0.07) !important;
+}
+.hero-title {
+    color: #2b6f8a !important;
+    font-size: 2rem !important;
+    letter-spacing: 1px !important;
+}
+.hero-sub { color: #71808a !important; }
+.card, .card-red {
+    background: #ffffff !important;
+    border: 1px solid #dce9ee !important;
+    box-shadow: 0 4px 16px rgba(43,111,138,0.06) !important;
+    border-radius: 12px !important;
+}
+.card-red {
+    border-left: 3px solid #2b6f8a !important;
+}
+.stButton > button {
+    background: #2b6f8a !important;
+    border-radius: 9px !important;
+    padding: 0.55rem 1.15rem !important;
+    box-shadow: 0 4px 10px rgba(43,111,138,0.15);
+}
+.stButton > button:hover {
+    background: #245f75 !important;
+    box-shadow: 0 6px 15px rgba(43,111,138,0.22) !important;
+}
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+.stTextArea textarea,
+.stSelectbox > div > div,
+.stMultiSelect > div > div {
+    background: #ffffff !important;
+    border-color: #d4e3e8 !important;
+    color: #203b49 !important;
+}
+.stTabs [data-baseweb="tab-list"] {
+    background: #ffffff !important;
+    border-radius: 10px 10px 0 0;
+}
+.stTabs [aria-selected="true"] {
+    color: #2b6f8a !important;
+    border-bottom-color: #2b6f8a !important;
+}
+[data-testid="stMetricValue"] { color: #2b6f8a !important; }
+[data-testid="stMetricLabel"] { color: #71808a !important; }
+.stAlert { border-radius: 10px !important; }
 </style>
 """, unsafe_allow_html=True)
 
 # ─────────────────────────────────────────────
-# MATPLOTLIB DARK THEME
+# MATPLOTLIB LIGHT THEME
 # ─────────────────────────────────────────────
 plt.rcParams.update({
-    "figure.facecolor": "#111111",
-    "axes.facecolor": "#0f0f0f",
-    "axes.edgecolor": "#333333",
-    "axes.labelcolor": "#cccccc",
-    "xtick.color": "#888888",
-    "ytick.color": "#888888",
-    "text.color": "#cccccc",
-    "grid.color": "#1a1a1a",
+    "figure.facecolor": "#ffffff",
+    "axes.facecolor": "#f8fbfc",
+    "axes.edgecolor": "#d7e2e7",
+    "axes.labelcolor": "#425761",
+    "xtick.color": "#71808a",
+    "ytick.color": "#71808a",
+    "text.color": "#425761",
+    "grid.color": "#e9f0f3",
     "grid.linewidth": 0.6,
 })
 
@@ -380,12 +471,12 @@ def ac3_solve():
 with st.sidebar:
     st.markdown("""
     <div style='text-align:center; padding:16px 0 8px'>
-        <span style='font-family:Orbitron; font-size:1.2rem; color:#ff1a1a; font-weight:900;'>
+        <span style='font-family:Orbitron; font-size:1.2rem; color:#2f7d95; font-weight:900;'>
             🩺 MED-AI
         </span><br>
-        <span style='color:#555; font-size:0.75rem;'>Diagnosis System v1.0</span>
+        <span style='color:#7b8d96; font-size:0.75rem;'>Diagnosis System v1.0</span>
     </div>
-    <hr style='border-color:#cc000030; margin:8px 0 16px'>
+    <hr style='border-color:#2b6f8a30; margin:8px 0 16px'>
     """, unsafe_allow_html=True)
 
     module = st.radio(
@@ -400,13 +491,13 @@ with st.sidebar:
          "📋 Patient Report"],
     )
 
-    st.markdown("<hr style='border-color:#cc000030; margin:16px 0'>", unsafe_allow_html=True)
+    st.markdown("<hr style='border-color:#2b6f8a30; margin:16px 0'>", unsafe_allow_html=True)
     st.markdown("""
-    <div class='card-red' style='font-size:0.78rem; color:#888;'>
-        <b style='color:#ff4444;'>Project:</b> Medical Diagnosis AI<br>
-        <b style='color:#ff4444;'>Student:</b> Hemayat — 2430-0198<br>
-        <b style='color:#ff4444;'>Institute:</b> CASE, Islamabad<br>
-        <b style='color:#ff4444;'>Course:</b> AI 2101
+    <div class='card-red' style='font-size:0.78rem; color:#71808a;'>
+        <b style='color:#3c8fa8;'>Project:</b> Medical Diagnosis AI<br>
+        <b style='color:#3c8fa8;'>Student:</b> Hemayat — 2430-0198<br>
+        <b style='color:#3c8fa8;'>Institute:</b> CASE, Islamabad<br>
+        <b style='color:#3c8fa8;'>Course:</b> AI 2101
     </div>
     """, unsafe_allow_html=True)
 
@@ -458,8 +549,8 @@ if module == "🏠 Dashboard":
         with cols[i % 3]:
             st.markdown(f"""
             <div class='card'>
-                <b style='color:#ff4444'>{title}</b>
-                <p style='color:#888; font-size:0.85rem; margin-top:8px'>{desc}</p>
+                <b style='color:#3c8fa8'>{title}</b>
+                <p style='color:#71808a; font-size:0.85rem; margin-top:8px'>{desc}</p>
             </div>
             """, unsafe_allow_html=True)
 
@@ -475,8 +566,8 @@ if module == "🏠 Dashboard":
         with a_cols[i % 2]:
             st.markdown(f"""
             <div class='card-red'>
-                <b style='color:#ff4444'>{name}</b>
-                <p style='color:#aaa; font-size:0.83rem; margin:6px 0 0'>{desc}</p>
+                <b style='color:#3c8fa8'>{name}</b>
+                <p style='color:#60717b; font-size:0.83rem; margin:6px 0 0'>{desc}</p>
             </div>
             """, unsafe_allow_html=True)
 
@@ -523,10 +614,10 @@ elif module == "🔍 Symptom Checker":
                 fig, ax = plt.subplots(figsize=(8, 3))
                 diseases = [r[0] for r in results[:6]]
                 scores = [r[1] for r in results[:6]]
-                colors = ["#cc0000" if i == 0 else "#660000" for i in range(len(diseases))]
+                colors = ["#2b6f8a" if i == 0 else "#6eaabd" for i in range(len(diseases))]
                 ax.barh(diseases[::-1], scores[::-1], color=colors[::-1])
                 ax.set_xlabel("Symptom Match Score")
-                ax.set_title("Diagnosis Ranking", color="#ff4444", fontsize=12)
+                ax.set_title("Diagnosis Ranking", color="#3c8fa8", fontsize=12)
                 fig.tight_layout()
                 st.pyplot(fig)
 
@@ -566,24 +657,24 @@ elif module == "🗺️ Graph Search (BFS/DFS/A*)":
             if path:
                 st.success(f"✅ Path found using {algo}  ({len(path) - 1} edges)")
                 steps_html = " → ".join(
-                    [f"<b style='color:#ff4444'>{s}</b>" for s in path]
+                    [f"<b style='color:#3c8fa8'>{s}</b>" for s in path]
                 )
                 st.markdown(f"<div class='card'>{steps_html}</div>", unsafe_allow_html=True)
 
                 # Visualise path
                 fig, ax = plt.subplots(figsize=(max(6, len(path) * 1.8), 2.5))
                 for i, node in enumerate(path):
-                    color = "#cc0000" if node in (path[0], path[-1]) else "#440000"
+                    color = "#2b6f8a" if node in (path[0], path[-1]) else "#9cc9d7"
                     ax.add_patch(plt.Circle((i * 2, 0), 0.55, color=color, zorder=3))
                     ax.text(i * 2, 0, node[:8], ha='center', va='center',
                             fontsize=7.5, color='white', zorder=4)
                     if i < len(path) - 1:
                         ax.annotate("", xy=((i + 1) * 2 - 0.6, 0), xytext=(i * 2 + 0.6, 0),
-                                    arrowprops=dict(arrowstyle="->", color="#ff4444", lw=1.5))
+                                    arrowprops=dict(arrowstyle="->", color="#3c8fa8", lw=1.5))
                 ax.set_xlim(-1, (len(path) - 1) * 2 + 1)
                 ax.set_ylim(-1, 1)
                 ax.axis("off")
-                ax.set_title(f"{algo} Path: {path[0]} → {path[-1]}", color="#ff4444")
+                ax.set_title(f"{algo} Path: {path[0]} → {path[-1]}", color="#3c8fa8")
                 fig.tight_layout()
                 st.pyplot(fig)
             else:
@@ -625,17 +716,17 @@ elif module == "📈 Logistic Regression":
         m3.metric("Final Loss", f"{losses[-1]:.4f}")
 
         fig, axes = plt.subplots(1, 2, figsize=(10, 3.5))
-        axes[0].plot(losses, color="#cc0000", lw=2)
-        axes[0].set_title("Training Loss", color="#ff4444")
+        axes[0].plot(losses, color="#2b6f8a", lw=2)
+        axes[0].set_title("Training Loss", color="#3c8fa8")
         axes[0].set_xlabel("Epoch");
         axes[0].set_ylabel("BCE Loss")
         axes[0].grid(True, alpha=0.3)
 
         probs = sigmoid(X @ theta)
-        axes[1].hist(probs[y == 0], bins=20, alpha=0.7, color="#004400", label="No Disease")
-        axes[1].hist(probs[y == 1], bins=20, alpha=0.7, color="#cc0000", label="Disease")
-        axes[1].axvline(0.5, color="#ff8800", linestyle="--", label="Threshold")
-        axes[1].set_title("Predicted Probability Distribution", color="#ff4444")
+        axes[1].hist(probs[y == 0], bins=20, alpha=0.7, color="#4f8f7f", label="No Disease")
+        axes[1].hist(probs[y == 1], bins=20, alpha=0.7, color="#2b6f8a", label="Disease")
+        axes[1].axvline(0.5, color="#d8892f", linestyle="--", label="Threshold")
+        axes[1].set_title("Predicted Probability Distribution", color="#3c8fa8")
         axes[1].legend(fontsize=8)
         fig.tight_layout()
         st.pyplot(fig)
@@ -680,20 +771,20 @@ elif module == "🔵 K-Means Clustering":
                          "Critical", "Acute", "Chronic"][:k]
 
         fig, axes = plt.subplots(1, 2, figsize=(11, 4))
-        reds = ["#cc0000", "#8b0000", "#ff4444", "#440000", "#ff8888", "#660000"]
+        blues = ["#2b6f8a", "#245f75", "#3c8fa8", "#9cc9d7", "#a8cfdb", "#6eaabd"]
         for ki in range(k):
             mask = labels == ki
-            axes[0].scatter(X[mask, 0], X[mask, 1], c=reds[ki], s=25,
+            axes[0].scatter(X[mask, 0], X[mask, 1], c=blues[ki], s=25,
                             alpha=0.7, label=cluster_names[ki])
         axes[0].scatter(centers[:, 0], centers[:, 1], c="white", marker="X",
-                        s=150, zorder=5, edgecolors="#ff4444", linewidths=1.5)
-        axes[0].set_title("Patient Clusters", color="#ff4444")
+                        s=150, zorder=5, edgecolors="#3c8fa8", linewidths=1.5)
+        axes[0].set_title("Patient Clusters", color="#3c8fa8")
         axes[0].legend(fontsize=8)
         axes[0].grid(True, alpha=0.2)
 
         counts = [np.sum(labels == ki) for ki in range(k)]
-        axes[1].bar(cluster_names, counts, color=reds[:k])
-        axes[1].set_title("Cluster Distribution", color="#ff4444")
+        axes[1].bar(cluster_names, counts, color=blues[:k])
+        axes[1].set_title("Cluster Distribution", color="#3c8fa8")
         axes[1].set_ylabel("Patients")
         fig.tight_layout()
         st.pyplot(fig)
@@ -777,8 +868,8 @@ elif module == "🧠 FOL Knowledge Base":
     for rule_id, rule in fol_rules:
         st.markdown(f"""
         <div class='card-red'>
-            <code style='color:#ff4444'>[{rule_id}]</code>
-            <span style='color:#ccc; margin-left:10px; font-family:monospace'>{rule}</span>
+            <code style='color:#3c8fa8'>[{rule_id}]</code>
+            <span style='color:#425761; margin-left:10px; font-family:monospace'>{rule}</span>
         </div>
         """, unsafe_allow_html=True)
 
@@ -813,8 +904,8 @@ elif module == "🧠 FOL Knowledge Base":
             for fact, rule in inferred:
                 st.markdown(f"""
                 <div class='card'>
-                    <code style='color:#ff4444'>[{rule}]</code>
-                    <span style='color:#e8e8e8; margin-left:10px'>{fact}</span>
+                    <code style='color:#3c8fa8'>[{rule}]</code>
+                    <span style='color:#203b49; margin-left:10px'>{fact}</span>
                 </div>
                 """, unsafe_allow_html=True)
         else:
@@ -843,39 +934,39 @@ elif module == "📋 Patient Report":
         info = DISEASE_INFO.get(top, {"severity": "—", "specialist": "—"})
 
         st.markdown(f"""
-        <div class='card' style='border-left:3px solid #cc0000'>
-            <div style='font-family:Orbitron; color:#ff4444; font-size:1.1rem; margin-bottom:14px'>
+        <div class='card' style='border-left:3px solid #2b6f8a'>
+            <div style='font-family:Orbitron; color:#3c8fa8; font-size:1.1rem; margin-bottom:14px'>
                 🩺 DIAGNOSTIC REPORT
             </div>
             <table style='width:100%; border-collapse:collapse; font-size:0.9rem'>
                 <tr>
-                    <td style='color:#888; padding:5px 12px 5px 0'>Patient</td>
-                    <td style='color:#fff; font-weight:600'>{name}</td>
-                    <td style='color:#888; padding:5px 12px 5px 20px'>Age / Gender</td>
-                    <td style='color:#fff'>{age} / {gender}</td>
+                    <td style='color:#71808a; padding:5px 12px 5px 0'>Patient</td>
+                    <td style='color:#203b49; font-weight:600'>{name}</td>
+                    <td style='color:#71808a; padding:5px 12px 5px 20px'>Age / Gender</td>
+                    <td style='color:#203b49'>{age} / {gender}</td>
                 </tr>
                 <tr>
-                    <td style='color:#888; padding:5px 12px 5px 0'>Temperature</td>
-                    <td style='color:{"#ff4444" if btemp >= 38.5 else "#fff"}'>{btemp}°C</td>
-                    <td style='color:#888; padding:5px 12px 5px 20px'>Symptoms</td>
-                    <td style='color:#fff'>{", ".join(syms) if syms else "—"}</td>
+                    <td style='color:#71808a; padding:5px 12px 5px 0'>Temperature</td>
+                    <td style='color:{"#c0392b" if btemp >= 38.5 else "#203b49"}'>{btemp}°C</td>
+                    <td style='color:#71808a; padding:5px 12px 5px 20px'>Symptoms</td>
+                    <td style='color:#203b49'>{", ".join(syms) if syms else "—"}</td>
                 </tr>
                 <tr>
-                    <td style='color:#888; padding:5px 12px 5px 0'>Primary Diagnosis</td>
-                    <td style='color:#ff4444; font-weight:700'>{top}</td>
-                    <td style='color:#888; padding:5px 12px 5px 20px'>Severity</td>
-                    <td style='color:#fff'>{info["severity"]}</td>
+                    <td style='color:#71808a; padding:5px 12px 5px 0'>Primary Diagnosis</td>
+                    <td style='color:#2b6f8a; font-weight:700'>{top}</td>
+                    <td style='color:#71808a; padding:5px 12px 5px 20px'>Severity</td>
+                    <td style='color:#203b49'>{info["severity"]}</td>
                 </tr>
                 <tr>
-                    <td style='color:#888; padding:5px 12px 5px 0'>Refer To</td>
-                    <td style='color:#fff'>{info["specialist"]}</td>
-                    <td style='color:#888; padding:5px 12px 5px 20px'>Confidence</td>
-                    <td style='color:#fff'>{results[0][1] if results else "—"} symptom match(es)</td>
+                    <td style='color:#71808a; padding:5px 12px 5px 0'>Refer To</td>
+                    <td style='color:#203b49'>{info["specialist"]}</td>
+                    <td style='color:#71808a; padding:5px 12px 5px 20px'>Confidence</td>
+                    <td style='color:#203b49'>{results[0][1] if results else "—"} symptom match(es)</td>
                 </tr>
             </table>
-            <div style='margin-top:14px; border-top:1px solid #cc000030; padding-top:12px'>
-                <span style='color:#888'>Doctor Notes:</span>
-                <p style='color:#ccc; margin-top:4px'>{notes}</p>
+            <div style='margin-top:14px; border-top:1px solid #2b6f8a30; padding-top:12px'>
+                <span style='color:#71808a'>Doctor Notes:</span>
+                <p style='color:#425761; margin-top:4px'>{notes}</p>
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -891,10 +982,8 @@ elif module == "📋 Patient Report":
 # FOOTER
 # ─────────────────────────────────────────────
 st.markdown("""
-<hr style='border-color:#cc000020; margin-top:40px'>
-<div style='text-align:center; color:#333; font-size:0.75rem; padding-bottom:12px'>
+<hr style='border-color:#2b6f8a20; margin-top:40px'>
+<div style='text-align:center; color:#9fb3bc; font-size:0.75rem; padding-bottom:12px'>
     Medical Diagnosis AI System · CASE Islamabad · AI 2101 · Built with Streamlit
 </div>
 """, unsafe_allow_html=True)
-
-
